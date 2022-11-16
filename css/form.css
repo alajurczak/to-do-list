@@ -1,0 +1,32 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.form__newTask {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 10px;
+    border: 2px solid rgba(232, 232, 232);
+}
+
+.form__button {
+    background-color: rgba(0, 128, 128);
+    color: rgba(255, 255, 255);
+    border: none;
+    padding: 10px;
+    height: 40px;
+}
+
+.form__button:hover {
+    background-color: rgba(7, 83, 83);
+    cursor: pointer;
+}
+
+.form__button:active {
+    background-color: rgba(7, 83, 83);
+    text-decoration: underline solid rgba(0, 128, 128);
+}
