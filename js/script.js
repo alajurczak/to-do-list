@@ -1,1 +1,7 @@
-console.log("Hello!");
+{
+  const welcome = () => {
+    console.log("Hello!");
+  }
+welcome();
+
+}
