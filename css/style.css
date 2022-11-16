@@ -1,0 +1,16 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #eee;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    word-break: break-word;
+}
