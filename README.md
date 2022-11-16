@@ -1,5 +1,5 @@
 # To do list
-## DEMO: 
+## DEMO: https://alajurczak.github.io/to-do-list/
 
 ## Used technologies:
 - HTML
