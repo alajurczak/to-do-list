@@ -1,5 +1,7 @@
-# To do list
+# TO-DO list
 ## DEMO: https://alajurczak.github.io/to-do-list/
+
+![Page animation](https://github.com/alajurczak/to-do-list/blob/main/images/TO-DO%20list.gif?raw=true)
 
 ## Used technologies:
 - HTML
