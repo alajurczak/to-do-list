@@ -2,7 +2,7 @@
   const welcome = () => {
     console.log("Hello!");
   }
-  welcome();
+
 
 
   const tasks = [
@@ -16,22 +16,6 @@
     },
   ];
 
-
-  const render = () => {
-    let htmlString = "";
-
-    for (const task of tasks) {
-      htmlString += `
-      <li>
-        ${task.content}
-      </li>
-      `;
-    }
-
-    document.querySelector(".js-tasks").innerHTML = htmlString;
-  };
-
-
   const addNewTask = (newTaskContent) => {
 
     tasks.push({
@@ -41,6 +25,38 @@
     render();
   };
 
+  const removeTask = (taskIndex) => {
+    tasks.splice(taskIndex, 1);
+    render();
+  };
+
+
+  const render = () => {
+    let htmlString = "";
+
+    for (const task of tasks) {
+      htmlString += `
+      <li>
+        <button>zrobione?</button>
+        <p>${task.content}</p>
+        <button class="js-remove">usuń</button>
+      </li>
+      `;
+    }
+
+    document.querySelector(".js-tasks").innerHTML = htmlString;
+
+    const removeButtons = document.querySelectorAll(".js-remove");
+
+    removeButtons.forEach((removeButton, index) => {
+      removeButton.addEventListener("click", () => {
+        removeTask(index);
+      });
+    });
+  };
+
+
+  
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -56,13 +72,15 @@
 
   };
 
-  
+
   const init = () => {
     render();
 
     const form = document.querySelector(".js-form");
 
     form.addEventListener("submit", onFormSubmit);
+
+    welcome();
 
   };
 
