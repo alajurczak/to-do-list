@@ -34,11 +34,11 @@
 }
 
 .form__button:hover {
-    background-color: rgba(7, 83, 83);
+    background-color: rgb(12, 160, 160);
     cursor: pointer;
 }
 
 .form__button:active {
-    background-color: rgba(7, 83, 83);
+    background-color: rgb(12, 160, 160);
     text-decoration: underline solid rgba(0, 128, 128);
 }
