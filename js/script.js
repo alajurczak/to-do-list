@@ -30,6 +30,11 @@
     render();
   };
 
+  const toggleTaskDone = (taskIndex) => {
+    tasks[taskIndex].done = !tasks[taskIndex].done;
+    render();
+  };
+
 
   const render = () => {
     let htmlString = "";
@@ -37,9 +42,9 @@
     for (const task of tasks) {
       htmlString += `
       <li>
-        <button>zrobione?</button>
+        <button class="js-done">${task.done ? "✓" : ""}</button>
         <p>${task.content}</p>
-        <button class="js-remove">usuń</button>
+        <button class="js-remove">🗑</button>
       </li>
       `;
     }
@@ -53,10 +58,18 @@
         removeTask(index);
       });
     });
+
+    const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+    toggleDoneButtons.forEach((toggleDoneButton, index) => {
+      toggleDoneButton.addEventListener("click", () => {
+        toggleTaskDone(index);
+      });
+    });
   };
 
 
-  
+
 
   const onFormSubmit = (event) => {
     event.preventDefault();
