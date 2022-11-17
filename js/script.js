@@ -3,22 +3,12 @@
     console.log("Hello!");
   }
 
-  const tasks = [
-    {
-      content: "obejrzeć lekcję",
-      done: true,
-    },
-    {
-      content: "wykonać zadanie domowe",
-      done: false,
-    },
-  ];
+  const tasks = [];
 
   const addNewTask = (newTaskContent) => {
     tasks.push({
       content: newTaskContent,
     });
-
     render();
   };
 
@@ -50,7 +40,6 @@
     });
   }
 
-
   const render = () => {
     let htmlString = "";
 
@@ -72,15 +61,14 @@
   const onFormSubmit = (event) => {
     event.preventDefault();
 
+    const newTaskContent = document.querySelector(".js-newTask");
+    const newTaskObject = newTaskContent.value.trim();
 
-    const newTaskContent = document.querySelector(".js-newTask").value.trim();
-
-    if (newTaskContent === "") {
-      return;
+    if (newTaskObject !== "") {
+      addNewTask(newTaskObject);
+      newTaskContent.value = "";
     }
-
-    addNewTask(newTaskContent);
-
+    newTaskContent.focus();
   };
 
   const init = () => {
@@ -91,7 +79,6 @@
     form.addEventListener("submit", onFormSubmit);
 
     welcome();
-
   };
 
   init();
