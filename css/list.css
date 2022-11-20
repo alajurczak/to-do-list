@@ -6,6 +6,10 @@
     padding: 5px 5px;
 }
 
+.list__item--hidden {
+    display: none;
+}
+
 .list__button {
     color: white;
     width: 30px;
