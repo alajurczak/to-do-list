@@ -65,7 +65,20 @@
     bindEvents();
   };
 
-  const renderButtons = () => {};
+  const renderButtons = () => {
+    let renderedButtons = "";
+
+    if (tasks.length > 0) {
+      renderedButtons += `
+      <button class="js-hideDoneTasks">Ukryj ukończone</button>
+      <button>Ukończ wszytkie</button>
+      `;
+    }
+
+    document.querySelector(".js-buttons").innerHTML = renderedButtons;
+
+  };
+
 
   const render = () => {
     renderTasks();
