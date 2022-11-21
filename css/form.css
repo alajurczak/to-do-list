@@ -37,6 +37,7 @@
     background-color: rgb(12, 160, 160);
     cursor: pointer;
     transition: 0.5s;
+    transform: scale(1.05);
 }
 
 .form__button:active {
