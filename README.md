@@ -16,4 +16,6 @@ In the tasks list:
 
 - You can mark a task as done or not done ✅
 - You can delete the whole tasks 🗑️
+- You can hide tasks that are done 
+- You can mark all tasks as done ✅✅✅
 
