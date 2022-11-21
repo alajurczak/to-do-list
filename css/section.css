@@ -23,3 +23,21 @@
     padding: 15px;
     margin: 20px;
 }
+
+.section--withButtons {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    border: none;
+    border-bottom: 2px solid rgba(232, 232, 232);
+
+}
+
+.section__buttons {
+    padding: 20px 40px 20px 0;
+
+}
+
+.section__header--withButtons {
+    border-bottom: none;
+}

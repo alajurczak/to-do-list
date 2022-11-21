@@ -36,6 +36,7 @@
 .form__button:hover {
     background-color: rgb(12, 160, 160);
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .form__button:active {
