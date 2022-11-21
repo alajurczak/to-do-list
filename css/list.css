@@ -26,8 +26,18 @@
     background-color: rgb(20, 132, 20);
 }
 
+.list__button--done:hover {
+    background-color: rgb(35, 176, 35);
+    transition: 0.5s;
+}
+
 .list__button--remove {
     background-color: rgb(233, 56, 56);
+}
+
+.list__button--remove:hover {
+    background-color: rgb(242, 101, 101);
+    transition: 0.5s;
 }
 
 .list__button--remove:active {
