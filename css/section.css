@@ -11,9 +11,20 @@
 }
 
 .section__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-bottom: 2px solid rgba(232, 232, 232);
+}
+
+@media (max-width: 767px) {
+    .section__header {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section__title {
     padding: 20px;
     background-color: rgba(255, 255, 255);
-    border-bottom: 2px solid rgba(232, 232, 232);
     margin: 0;
     font-size: 20px;
 }
@@ -24,20 +35,6 @@
     margin: 20px;
 }
 
-.section--withButtons {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    border: none;
-    border-bottom: 2px solid rgba(232, 232, 232);
-
-}
-
 .section__buttons {
-    padding: 20px 40px 20px 0;
-
-}
-
-.section__header--withButtons {
-    border-bottom: none;
+    padding: 20px 40px 20px 20px;
 }
