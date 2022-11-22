@@ -18,30 +18,34 @@
 }
 
 .list__button:hover {
-    border: 2px solid black;
     cursor: pointer;
 }
 
 .list__button--done {
     background-color: rgb(20, 132, 20);
+    transition: 0.5s;
 }
 
 .list__button--done:hover {
     background-color: rgb(35, 176, 35);
-    transition: 0.5s;
+}
+
+.list__button--done:active {
+    border: 2px solid black;
 }
 
 .list__button--remove {
     background-color: rgb(233, 56, 56);
+    transition: 0.5s;
 }
 
 .list__button--remove:hover {
     background-color: rgb(242, 101, 101);
-    transition: 0.5s;
 }
 
 .list__button--remove:active {
     background-color: rgb(161, 4, 4);
+    border: 2px solid black;
 }
 
 
